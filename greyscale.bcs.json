@@ -1,0 +1,22 @@
+{
+  "name":"Greyscale",
+  "shaderVersion":"300",
+  "author":"keffen/tekhion",
+  "date": 1589036584000,
+  "description": "Turn your game into greyscale",
+  "shader": `#version 300 es
+    precision mediump float;
+    
+    in vec2 vPixelCoord;
+    out vec4 fColor;
+    
+    uniform sampler2D uStageTex;
+    
+    void main() {
+        float greyScale = length(texture(uStageTex,vPixelCoord).rgb)/sqrt(3.0);
+        fColor = vec4(greyScale*vec3(1,1,1),1);
+        //fColor = 1.0 - fColor + vec4(0,0,0,1); //uncomment this line for the inverted mode
+    }`,
+    "container":"",
+    "uniforms":{}
+}
