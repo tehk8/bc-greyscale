@@ -14,8 +14,8 @@
     
     void main() {
         float greyScale = length(texture(uStageTex,vPixelCoord).rgb)/sqrt(3.0);
-        fColor = vec4(greyScale*vec3(1,1,1),1);
-        //fColor = 1.0 - fColor + vec4(0,0,0,1); //uncomment this line for the inverted mode
+        //greyScale = 1.0 - greyScale //uncomment this line for the inverted mode
+        fColor = vec4(vec3(greyScale),1);
     }`,
     "container":"",
     "uniforms":{}
