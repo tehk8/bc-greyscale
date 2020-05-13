@@ -1,6 +1,6 @@
 {
   "name":"Greyscale",
-  "shaderVersion":"300",
+  "shaderVersion":"1.2",
   "author":"keffen/tekhion",
   "date": 1589036584000,
   "description": "Turn your game into greyscale",
